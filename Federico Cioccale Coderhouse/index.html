@@ -1,265 +1,130 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Crypto Hub</title>
-    <!-- Fuentes de Google -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
-    <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Iconos -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- mi CSS -->
-    <link rel="stylesheet" href="style.css">
-</head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Cripto Hub</title>
+	<!-- fuentes de google -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+	<!-- bootstrap -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+	<!-- mi css -->
+	<link rel="stylesheet" href="style.css"> </head>
 <body>
-    <div class="container-fluid">
-        <!-- Header -->
-        <header class="row">
-            <div class="col-12 text-center py-2">
-                <h1 class="d-inline-block border border-4 border-dark p-4">Crypto Hub</h1>
-            </div>
-        </header>
-
-        <!-- Navbar -->
-        <nav class="row">
-            <div class="col-12 d-flex flex-column flex-md-row justify-content-center py-2 gap-4 barra">
-                <a href="pages/noticias.html" class="nav-link px-1">Noticias</a>
-                <a href="pages/articulos.html" class="nav-link px-1">Artículos</a>
-                <a href="pages/indices.html" class="nav-link px-1">Indices</a>
-                <a href="pages/quienes-somos.html" class="nav-link px-1">Quiénes somos</a>
-                <a href="pages/contacto.html" class="nav-link px-1">Contacto</a>
-            </div>
-            <div class="cryptohopper-web-widget" data-id="2" data-round="0" data-changes="0"></div>
-        </nav>
-
-        <!-- Contenido -->
-        <div class="row">
-            <!-- Aside Izquierdo -->
-            <aside class="col-12 col-lg-3 aside-left order-1 order-lg-0 py-2">
-                <div class="news-box border border-4 border-dark d-flex justify-content-center align-items-center text-center mb-3">
-                    <h2><a href="pages/noticias.html" class="text-dark text-decoration-none">ULTIMAS NOTICIAS</a></h2>
-                </div>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Bitcoin alcanza nuevo máximo histórico en 2025</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Bitcoin</span>
-                        <span class="btn btn-sm btn-secondary">Mercado</span>
-                        <span class="btn btn-sm btn-success">Récord</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Ethereum lanza actualización que reduce tarifas</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Ethereum</span>
-                        <span class="btn btn-sm btn-secondary">Tecnología</span>
-                        <span class="btn btn-sm btn-success">Tarifas</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Ripple gana caso legal contra la SEC</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Ripple</span>
-                        <span class="btn btn-sm btn-secondary">Regulación</span>
-                        <span class="btn btn-sm btn-success">Legal</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Dogecoin sube 50% tras tuit de Elon Musk</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Dogecoin</span>
-                        <span class="btn btn-sm btn-secondary">Memes</span>
-                        <span class="btn btn-sm btn-success">Elon Musk</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Binance expande servicios en América Latina</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Binance</span>
-                        <span class="btn btn-sm btn-secondary">Expansión</span>
-                        <span class="btn btn-sm btn-success">Latam</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Cardano implementa contratos inteligentes avanzados</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Cardano</span>
-                        <span class="btn btn-sm btn-secondary">Tecnología</span>
-                        <span class="btn btn-sm btn-success">Contratos</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Stablecoin de Tether bajo escrutinio regulatorio</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Tether</span>
-                        <span class="btn btn-sm btn-secondary">Regulación</span>
-                        <span class="btn btn-sm btn-success">Stablecoin</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Solana supera a Ethereum en velocidad de transacciones</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Solana</span>
-                        <span class="btn btn-sm btn-secondary">Rendimiento</span>
-                        <span class="btn btn-sm btn-success">Velocidad</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Hackeo a exchange descentralizado roba $10M</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Seguridad</span>
-                        <span class="btn btn-sm btn-secondary">DEX</span>
-                        <span class="btn btn-sm btn-success">Hackeo</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">Polkadot conecta 50 parachains con éxito</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">Polkadot</span>
-                        <span class="btn btn-sm btn-secondary">Interoperabilidad</span>
-                        <span class="btn btn-sm btn-success">Parachains</span>
-                    </div>
-                </div>
-                <hr>
-                <div class="news-item mb-3">
-                    <a href="pages/noticias.html" class="d-block text-dark text-decoration-none">XRP Ledger integra NFTs nativos</a>
-                    <div class="tags mt-2">
-                        <span class="btn btn-sm btn-primary">XRP</span>
-                        <span class="btn btn-sm btn-secondary">NFTs</span>
-                        <span class="btn btn-sm btn-success">Integración</span>
-                    </div>
-                </div>
-                <hr>
-            </aside>
-
-            <!-- Main -->
-            <main class="col-12 col-lg-6 main order-2 py-2">
-                <div class="portada mb-3">
-                    <img src="assets/portada.webp" alt="Portada de Crypto Hub" class="img-fluid">
-                </div>
-                <h1>Bitcoin alcanza un nuevo récord histórico: ¿Hacia dónde va el mercado</h1>
-                <p class="subtituloPortada">El precio de Bitcoin superó los $100,000 por primera vez en la historia...</p>
-                <ul class="lista-elementos list-unstyled mt-4">
-                    <!-- Primer ítem -->
-                    <li class="row mb-4">
-                        <div class="col-12 col-md-3 d-md-block d-none">
-                            <img src="assets/portada01.webp" alt="Imagen 1" class="img-fluid rounded">
-                        </div>
-                        <div class="col-12 col-md-9 contenido">
-                            <h3>Ethereum 2.0: La actualización que promete revolucionar las finanzas descentralizadas</h3>
-                            <p>La tan esperada actualización de Ethereum 2.0 ha sido lanzada con éxito...</p>
-                        </div>
-                    </li>
-            
-                    <!-- Segundo ítem -->
-                    <li class="row mb-4">
-                        <div class="col-12 col-md-3 d-md-block d-none">
-                            <img src="assets/portada02.webp" alt="Imagen 2" class="img-fluid rounded">
-                        </div>
-                        <div class="col-12 col-md-9 contenido">
-                            <h3>NFTs de artistas emergentes alcanzan precios récord en subastas digitales</h3>
-                            <p>Obras de arte digital de creadores anónimos se han vendido por millones...</p>
-                        </div>
-                    </li>
-            
-                    <!-- Tercer ítem -->
-                    <li class="row mb-4">
-                        <div class="col-12 col-md-3 d-md-block d-none">
-                            <img src="assets/portada03.webp" alt="Imagen 3" class="img-fluid rounded">
-                        </div>
-                        <div class="col-12 col-md-9 contenido">
-                            <h3>Ripple gana batalla legal contra la SEC: ¿Qué significa para el futuro de XRP?</h3>
-                            <p>Un fallo favorable contra la SEC ha renovado la confianza de los inversores, lo que podría impulsar el precio de XRP y allanar el camino para regulaciones más claras en el sector de las criptomonedas.</p>
-                        </div>
-                    </li>
-            
-                    <!-- Cuarto ítem -->
-                    <li class="row mb-4">
-                        <div class="col-12 col-md-3 d-md-block d-none">
-                            <img src="assets/portada04.webp" alt="Imagen 4" class="img-fluid rounded">
-                        </div>
-                        <div class="col-12 col-md-9 contenido">
-                            <h3>Elon Musk anuncia que Tesla aceptará Dogecoin para compras de autos</h3>
-                            <p>El CEO de Tesla anunció que la compañía aceptará Dogecoin como pago, provocando un aumento del 50% en su precio en 24 horas.</p>
-                        </div>
-                    </li>
-                </ul>
-            </main>
-
-            <!-- Aside Derecho -->
-            <aside class="col-12 col-lg-3 aside-right order-3 py-2">
-                <div class="news-box border border-4 border-dark d-flex justify-content-center align-items-center text-center mb-3">
-                    <h2><a href="pages/indices.html" class="text-dark text-decoration-none">INDICES</a></h2>
-                </div>
-                <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <div class="widget-container">
-                                <script src="https://widgets.coingecko.com/gecko-random-coin-widget.js"></script>
-                                <gecko-random-coin-widget locale="en"></gecko-random-coin-widget>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="widget-container">
-                                <script src="https://widgets.coingecko.com/gecko-coin-price-chart-widget.js"></script>
-                                <gecko-coin-price-chart-widget locale="en" transparent-background="true" initial-currency="usd"></gecko-coin-price-chart-widget>
-                            </div>
-                        </div>
-                        <div class="carousel-item">
-                            <div class="widget-container">
-                                <script src="https://widgets.coingecko.com/gecko-coin-list-widget.js"></script>
-                                <gecko-coin-list-widget locale="en" transparent-background="true" coin-ids="" initial-currency="usd"></gecko-coin-list-widget>
-                            </div>
-                        </div>
-                    </div>
-                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </a>
-                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </a>
-                </div>
-            </aside>
-        </div>
-
-        <!-- Footer -->
-        <footer class="row footer order-4 mt-5">
-            <div class="col-12 text-center">
-                <div class="footer-content">
-                    <div class="footer-section">
-                                                <div class="social-icons d-flex justify-content-center gap-2">
-                            <a href="https://twitter.com/" target="_blank" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
-                            <a href="https://facebook.com/" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                            <a href="https://instagram.com/" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                            <a href="https://linkedin.com/" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer-bottom mt-3">
-                    <p>© 2023 Cryupto Hub. Todos los derechos reservados.</p>
-                    <p><a href="/politica-de-privacidad" class="text-dark">Política de Privacidad</a> | <a href="/terminos-y-condiciones" class="text-dark">Términos y Condiciones</a></p>
-                </div>
-            </div>
-        </footer>
-    </div>
-
-    <!-- Scripts -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"></script>
-    <script src="https://www.cryptohopper.com/widgets/js/script"></script>
+	<!-- header -->
+	<header class="container-fluid"> <a href=""><h1 id="titulo">Crypto Hub</h1></a> </header>
+	<!-- navbar -->
+	<nav class="navbarOriginal container-fluid">
+		<ul>
+			<li><a href="pages/noticias.html">Noticias</a></li>
+			<li><a href="pages/articulos.html">Artículos</a></li>
+			<li><a href="pages/indices.html">Indices</a></li>
+			<li><a href="pages/contacto.html">Contacto</a></li>
+			<li><a href="pages/quienes-somos.html">Quiénes Somos</a></li>
+		</ul>
+		<div id="cr-widget-marquee" data-coins="bitcoin,tether,ethereum,eos,ripple,xrp-on-solana,monero,litecoin,bnb,solana,usdcoin,dogecoin,cardano,lido-staked-ether,tron,wrapped-bitcoin,chainlink,stellar,avalanche,sui" data-theme="light" data-show-symbol="true" data-show-icon="true" data-show-period-change="true" data-period-change="24H" data-api-url="https://api.cryptorank.io/v0"></div>
+	</nav>
+	<main class="container-fluid">
+		<div class="row">
+			<aside class="col-lg-3 col-12 order-lg-1 order-1">
+				<!-- aside a ULTIMAS NOTICIAS -->
+				<div class="titulos"><a href="pages/noticias.html"><h3 class="caja">ULTIMAS NOTICIAS</h3></a></div>
+				<ul class="list-unstyled">
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Bitcoin supera los $100,000 por primera vez en la historia</a><br><button class="btn btn-sm btn-primary btn-custom">Bitcoin</button><button class="btn btn-sm btn-secondary btn-custom">Mercado</button><button class="btn btn-sm btn-warning btn-custom">Inversiones</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Ethereum lanza su esperada actualización "Quantum Merge"</a><br><button class="btn btn-sm btn-success btn-custom">Ethereum</button><button class="btn btn-sm btn-dark btn-custom">Blockchain</button><button class="btn btn-sm btn-info btn-custom">Actualización</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">El Salvador adopta Solana como moneda de curso legal</a><br><button class="btn btn-sm btn-danger btn-custom">Solana</button><button class="btn btn-sm btn-primary btn-custom">Latinoamérica</button><button class="btn btn-sm btn-secondary btn-custom">Gobierno</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Ripple gana batalla legal contra la SEC</a><br><button class="btn btn-sm btn-info btn-custom">Ripple</button><button class="btn btn-sm btn-dark btn-custom">Regulación</button><button class="btn btn-sm btn-warning btn-custom">Tribunales</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Tesla ahora acepta pagos con Dogecoin para sus autos</a><br><button class="btn btn-sm btn-primary btn-custom">Dogecoin</button><button class="btn btn-sm btn-danger btn-custom">Empresas</button><button class="btn btn-sm btn-success btn-custom">Pagos</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Binance lanza su propia stablecoin respaldada en oro</a><br><button class="btn btn-sm btn-warning btn-custom">Binance</button><button class="btn btn-sm btn-secondary btn-custom">Stablecoin</button><button class="btn btn-sm btn-primary btn-custom">Oro</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">La Unión Europea aprueba regulaciones pro-crypto</a><br><button class="btn btn-sm btn-dark btn-custom">Regulación</button><button class="btn btn-sm btn-info btn-custom">Europa</button><button class="btn btn-sm btn-success btn-custom">Blockchain</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">NFTs regresan con fuerza tras nueva integración en videojuegos</a><br><button class="btn btn-sm btn-secondary btn-custom">NFTs</button><button class="btn btn-sm btn-warning btn-custom">Gaming</button><button class="btn btn-sm btn-primary btn-custom">Tendencias</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Hackers roban $500M en criptomonedas de un exchange japonés</a><br><button class="btn btn-sm btn-danger btn-custom">Seguridad</button><button class="btn btn-sm btn-dark btn-custom">Hackeo</button><button class="btn btn-sm btn-warning btn-custom">Exchange</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Famoso banco suizo lanza su propia criptomoneda</a><br><button class="btn btn-sm btn-info btn-custom">Banca</button><button class="btn btn-sm btn-success btn-custom">Criptomoneda</button><button class="btn btn-sm btn-primary btn-custom">Finanzas</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Visa y Mastercard incorporan pagos con criptomonedas</a><br><button class="btn btn-sm btn-primary btn-custom">Pagos</button><button class="btn btn-sm btn-dark btn-custom">Tarjetas</button><button class="btn btn-sm btn-success btn-custom">Adopción</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">China levanta restricciones a las criptomonedas</a><br><button class="btn btn-sm btn-danger btn-custom">China</button><button class="btn btn-sm btn-secondary btn-custom">Regulación</button><button class="btn btn-sm btn-warning btn-custom">Mercado</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Ethereum supera a Bitcoin en capitalización de mercado</a><br><button class="btn btn-sm btn-success btn-custom">Ethereum</button><button class="btn btn-sm btn-primary btn-custom">Bitcoin</button><button class="btn btn-sm btn-dark btn-custom">Mercado</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">País africano adopta criptomonedas para su economía</a><br><button class="btn btn-sm btn-secondary btn-custom">Criptomonedas</button><button class="btn btn-sm btn-warning btn-custom">África</button><button class="btn btn-sm btn-info btn-custom">Adopción</button></li>
+					<li class="mb-3 pb-3 border-bottom"><a href="pages/noticias.html" class="text-decoration-none">Nuevas predicciones indican que Bitcoin podría llegar a $500,000</a><br><button class="btn btn-sm btn-primary btn-custom">Bitcoin</button><button class="btn btn-sm btn-danger btn-custom">Predicciones</button><button class="btn btn-sm btn-warning btn-custom">Mercado</button></li>
+				</ul>
+			</aside>
+			<!-- main -->
+			<div class="col-lg-6 col-12 order-lg-2 order-2 content">
+				<section class="header-section">
+					<a href="pages/articulos.html"><img src="assets/01.png" alt="Crypto Cover" class="cover-image"></a> <a href="pages/articulos.html"><h1 class="title">Nueva stablecoin respaldada en oro gana tracción</h1></a>
+					<p class="subtitle">Una stablecoin innovadora vinculada al precio del oro está siendo adoptada por exchanges importantes como alternativa a USDT y USDC</p>
+				</section>
+				<section class="articles-list">
+					<div class="article-item">
+						<a href="pages/articulos.html"><img src="assets/02.png" alt="Bitcoin" class="article-image"></a>
+						<div class="article-content"><a href="#bitcoin"><h3>Bitcoin alcanza nuevo máximo histórico</h3></a>
+							<p>El precio de Bitcoin superó los $80,000 esta semana tras la aprobación de nuevos ETFs en Estados Unidos, marcando un hito importante para la adopción institucional.</p>
+						</div>
+					</div>
+					<div class="divider"></div>
+					<div class="article-item">
+						<a href="pages/articulos.html"><img src="assets/03.png" alt="Ethereum" class="article-image"></a>
+						<div class="article-content"><a href="#ethereum"><h3>Ethereum prepara su próxima actualización</h3></a>
+							<p>La comunidad de Ethereum anuncia detalles sobre la implementación de sharding, prometiendo transacciones más rápidas y económicas para finales de 2025.</p>
+						</div>
+					</div>
+					<div class="divider"></div>
+					<div class="article-item">
+						<a href="pages/articulos.html"><img src="assets/04.png" alt="NFT" class="article-image"></a>
+						<div class="article-content"><a href="#nft"><h3>NFT marketplace revoluciona el arte digital</h3></a>
+							<p>Una nueva plataforma basada en Solana permite a artistas vender sus obras tokenizadas con comisiones mínimas, atrayendo a miles de creadores.</p>
+						</div>
+					</div>
+					<div class="divider"></div>
+					<div class="article-item">
+						<a href="pages/articulos.html"><img src="assets/05.png" alt="DeFi" class="article-image"></a>
+						<div class="article-content"><a href="#defi"><h3>DeFi supera los $200 mil millones en valor bloqueado</h3></a>
+							<p>Las finanzas descentralizadas continúan su crecimiento exponencial con nuevos protocolos que ofrecen rendimientos atractivos para inversores.</p>
+						</div>
+					</div>
+					<div class="divider"></div>
+				</section>
+			</div>
+			<!-- aside b INDICES CRYPTO -->
+			<aside class="col-lg-3 col-12 order-lg-3 order-3">
+				<div class="titulos"><a href="pages/indices.html"><h3 class="caja">INDICES CRYPTO</h3></a></div>
+				<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<gecko-coin-list-widget locale="en" transparent-background="true" coin-ids="" initial-currency="usd"></gecko-coin-list-widget>
+						</div>
+						<div class="carousel-item">
+							<gecko-random-coin-widget locale="en"></gecko-random-coin-widget>
+						</div>
+						<div class="carousel-item">
+							<gecko-coin-ticker-widget locale="en" outlined="false" initial-currency="usd"></gecko-coin-ticker-widget>
+						</div>
+					</div> <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev"><span class="carousel-control-prev-icon" aria-hidden="true"></span><span class="sr-only"></span></a> <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next"><span class="carousel-control-next-icon" aria-hidden="true"></span><span class="sr-only"></span></a> </div>
+			</aside>
+		</div>
+	</main>
+	<!-- footer -->
+	<footer class="container-fluid">
+		<div class="container">
+			<div class="row justify-content-center text-center">
+				<div class="col-md-4">
+					<h5 class="text-uppercase fw-bold">Seguinos</h5> <a href="https://x.com/home" class="text-light me-3"><i class="bi bi-twitter"></i></a> <a href="https://www.facebook.com/" class="text-light me-3"><i class="bi bi-facebook"></i></a> <a href="https://www.instagram.com/" class="text-light me-3"><i class="bi bi-instagram"></i></a> <a href="https://www.telegram.com/" class="text-light"><i class="bi bi-telegram"></i></a> </div>
+			</div>
+			<div class="text-center mt-3">
+				<p class="mb-0 small">© 2025 Crypto Hub. Todos los derechos reservados.</p>
+			</div>
+		</div>
+	</footer>
+	<!-- scripts y widgets externos -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+	<script src="https://cryptorank.io/widget/marquee.js"></script>
+	<script src="https://widgets.coingecko.com/gecko-coin-list-widget.js"></script>
+	<script src="https://widgets.coingecko.com/gecko-random-coin-widget.js"></script>
+	<script src="https://widgets.coingecko.com/gecko-coin-ticker-widget.js"></script>
 </body>
 </html>

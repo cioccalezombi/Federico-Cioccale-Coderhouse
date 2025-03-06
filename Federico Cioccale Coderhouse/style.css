@@ -1,214 +1,313 @@
-/* Reset y estilos generales */
+/* 1. Fuentes y resets */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Press Start 2P", serif;
-    color: black;
 }
 
-a {
-    text-decoration: none;
-    color: black;
-}
-
-/* Header */
-header {
-    padding: 50px 0 20px;
-}
-
-header h1 {
-    font-size: 3rem; /* Aumentado de 2rem a 3rem */
-}
-
-/* Navbar */
-nav {
-    padding: 10px 0 25px;
-}
-
-nav .barra {
-    border: 4px solid black;
-}
-
-.nav-link {
-    text-decoration: none;
-    color: black;
-}
-
-.nav-link:hover {
-    background-color: #555;
-    border-radius: 4px;
-}
-
-.cryptohopper-web-widget {
-    padding-top: 10px;
-}
-
-/* Aside */
-aside {
-    border: 4px solid black;
-}
-
-.news-box {
-    height: 100px;
-}
-
-.news-box h2 {
-    font-size: 1.5rem;
-    margin: 0;
-}
-
-.news-item a {
-    font-size: 12px;
-}
-
-/* Main */
-main {
-    border: 4px solid black;
-}
-
-main h1 {
-    font-size: 2rem;
-}
-
-.portada img {
-    height: 400px;
-    object-fit: cover;
-}
-
-.subtituloPortada {
-    font-size: 12px;
+/* 2. Tipografía */
+h3 { font-size: 18px; }
+.list-unstyled { font-size: 10px; }
+.article-content p, .header-section p {
+    font-family: 'Roboto', sans-serif;
     color: #555;
 }
+.title { font-size: 2.5em; color: #333; }
+.subtitle { font-size: 1.2em; color: #666; margin-bottom: 50px; }
 
-.contenido h3 {
-    font-size: 13px;
-}
+/* 3. Enlaces */
+a { color: inherit; text-decoration: none !important; }
+a:hover { color: inherit !important; text-decoration: none !important; }
+.list-unstyled a, .content a { color: inherit !important; }
+.list-unstyled a:hover, .content a:hover { color: inherit !important; }
 
-.contenido p {
-    font-family: 'Courier New', Courier, monospace;
-    font-size: 14px;
-    font-weight: bold;
-}
+/* 4. Botones */
+.btn-custom { font-size: 6px; margin: 1px; }
 
-.noticias {
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
-    padding-top: 20px;
-}
-
-.noticias h2 {
-    font-family: 'Courier New', Courier, monospace;
-}
-
-.indices-portada {
-    font-size: 30px;
-}
-
-/* Sección Quiénes Somos */
-main .about-us-content {
-    max-width: 1200px;
-    margin: 0 auto;
-}
-
-main .about-us-content h2 {
-    border: 4px solid black;
-    display: inline-block;
-    text-align: center;
-    padding: 20px;
-    margin: 0 auto 40px;
-    width: auto;
-    font-family: 'Roboto', sans-serif;
-}
-
-main .about-us-text {
-    padding: 0 15px;
-}
-
-main .about-us-cards .card {
-    border: 4px solid black;
-    height: 100%;
-}
-
-main .about-us-cards .card .card-body {
+/* 5. Estructura general */
+body {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
-    min-height: 200px;
+    min-height: 100vh;
 }
 
-main .about-us-cards .card .fa-globe,
-main .about-us-cards .card .fa-tools,
-main .about-us-cards .card .fa-users {
-    color: #000;
+header, .navbarOriginal, main, footer {
+    width: 100%;
 }
 
-/* Carrusel */
-.carousel {
-    height: 400px;
+/* 6. Main con Bootstrap */
+main {
+    padding: 20px;
 }
 
-.carousel-inner,
-.carousel-item,
-.widget-container {
-    height: 100%;
+aside {
+    padding: 5px;
 }
 
-.carousel-control-prev,
-.carousel-control-next {
-    filter: brightness(0);
-    top: 90%;
+.content {
+    padding: 20px;
+    border: solid black 4px;
 }
 
-/* Footer */
-footer {
-    border: 4px solid black;
-    font-family: Arial, sans-serif;
-}
+/* 7. Header */
+header { padding: 20px; text-align: center; }
+header h1 { border: solid black 4px; padding: 25px; display: inline-block; }
 
-.social-icons a {
-    font-size: 30px;
+/* 8. Navbar */
+.navbarOriginal { padding: 10px; }
+.navbarOriginal ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 0 0 15px 0;
+    padding: 0;
+}
+.navbarOriginal li { display: inline; }
+.navbarOriginal a {
+    text-decoration: none;
     color: black;
+    font-size: 18px;
+    padding: 10px 15px;
+}
+.navbarOriginal ul :hover { color: #666; }
+
+/* 9. Footer */
+footer {
+    background-color: inherit;
+    color: black;
+    font-size: 0.8rem;
+    margin-top: 40px;
+    text-align: center;
     padding: 10px;
+    border: solid black 4px;
 }
+footer h5 { font-size: 0.9rem; }
+footer i { color: black; font-size: 40px; }
 
-.footer-bottom p {
-    font-size: 10px;
-}
-
-/* Botones pequeños */
-.btn-sm {
-    padding: 2px;
-    font-size: 10px;
-    line-height: 1.2;
-}
-
-/* Media Queries */
-@media (max-width: 768px) {
-    .nav-link {
-        margin: 0.5rem 0;
-        text-align: center;
+/* 10. Media Queries para móviles y tablets */
+@media (max-width: 991px) {
+    main {
+        padding: 10px;
     }
 
-    .portada img {
-        height: 300px;
+    aside, .content {
+        width: 100%;
+        margin-bottom: 20px;
     }
 
-    main .about-us-content h2 {
-        font-size: 1.5rem;
+    .navbarOriginal ul {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbarOriginal li {
+        margin: 10px 0;
+    }
+    .navbarOriginal a {
+        font-size: 21.6px;
+    }
+    #cr-widget-marquee {
+        font-size: 0.9rem;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
         padding: 15px;
     }
 
-    main .about-us-text p {
-        font-size: 1rem;
+    .caja {
+        width: 100%;
+        padding: 15px;
+    }
+    h3 {
+        font-size: 21.6px;
+    }
+    .list-unstyled {
+        font-size: 12px;
+    }
+    .btn-custom {
+        font-size: 7.2px;
     }
 
-    main .about-us-cards .card {
-        margin: 0 auto;
-        max-width: 300px;
+    .title { font-size: 2.16em; }
+    .subtitle { font-size: 1.2em; margin-bottom: 30px; }
+    .cover-image { height: 250px; }
+
+    .article-item {
+        flex-direction: column;
+        align-items: center;
+    }
+    .article-image {
+        display: none; /* Ocultar las imágenes en móviles */
+    }
+    .article-content h3 {
+        font-size: 21.6px;
+    }
+    .article-content p {
+        font-size: 1.2em;
     }
 
-    main .about-us-cards .card .card-body {
-        min-height: 180px;
+    .carousel {
+        height: 300px;
     }
+    .carousel-inner {
+        height: 100%;
+    }
+}
+
+/* 11. Otras clases y componentes */
+
+.header-section { 
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    text-align: center; 
+    gap: 20px; 
+}
+
+.caja { 
+    padding: 20px; 
+    border: solid black 4px; 
+    text-align: center; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    font-family: 'Press Start 2P', cursive; 
+}
+
+.titulos { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    margin-bottom: 25px; 
+}
+
+.cover-image { 
+    width: 100%; 
+    height: 400px; 
+    object-fit: cover; 
+}
+
+.divider { 
+    width: 100%; 
+    height: 1px; 
+    background-color: #ccc; 
+}
+
+.articles-list { 
+    display: flex; 
+    flex-direction: column; 
+    gap: 30px; 
+}
+
+.article-item { 
+    display: flex; 
+    gap: 20px; 
+    align-items: flex-start; 
+}
+
+.article-image { 
+    width: 200px; 
+    height: 150px; 
+    flex-shrink: 0; 
+    object-fit: cover; 
+}
+
+.article-content { 
+    flex: 1; 
+}
+
+.article-content h3 { 
+    margin-bottom: 10px; 
+    color: #333; 
+}
+
+.carousel { 
+    border: solid black 4px; 
+    height: 400px; 
+    padding: 10px; 
+}
+
+.carousel-inner { 
+    height: 400px; 
+    overflow: hidden; 
+}
+
+.carousel-item { 
+    height: 100%; 
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon { 
+    filter: invert(100%); 
+}
+
+.carousel-control-prev, .carousel-control-next { 
+    top: 85%; 
+    transform: translateY(0); 
+}
+
+#cr-widget-marquee { 
+    margin-top: 20px; 
+    border: solid black 4px; 
+    padding: 10px; 
+}
+
+ul { 
+    border: solid black 4px; 
+    padding: 10px; 
+}
+
+.list-unstyled { 
+    padding-left: 10px; 
+}
+
+.noticias h1 {
+    font-size: 1.3rem;
+}
+
+.noticias .subtitle {
+    font-family: "Press Start 2P", serif;
+    font-size: 0.75rem;
+    margin: 20px;
+}
+
+.titulo-noticia{
+    margin: 0px;
+    padding: 0px;
+}
+
+.noticia p{
+    font-family: 'Roboto', sans-serif ;
+}
+
+.scroll-top-btn {
+    display: block; 
+    border: 4px solid black;
+    padding: 20px;
+    text-decoration: none;
+    color: black;
+    margin: 20px auto 0 auto;
+    text-align: center;
+    width: fit-content;
+}
+
+.titulo-noticia {
+    margin-bottom: -20px;
+}
+
+.subtitle {
+    margin-top: 0;
+}
+
+.indices{
+    width: 99%;
+}
+
+gecko-coin-heatmap-widget,
+gecko-coin-list-widget,
+gecko-coin-price-chart-widget,
+gecko-coin-compare-chart-widget {
+    display: block;
+    margin-bottom: 40px;
 }
