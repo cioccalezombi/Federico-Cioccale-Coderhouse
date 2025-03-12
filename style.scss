@@ -1,4 +1,3 @@
-// 1. Variables
 $black: #000;
 $gray-333: #333;
 $gray-555: #555;
@@ -9,7 +8,38 @@ $font-secondary: "Roboto", sans-serif;
 $border-standard: solid $black 4px;
 $gradient: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
 
-// 2. Resets
+
+%bordered {
+  border: $border-standard;
+}
+
+
+%centered-text {
+  text-align: center;
+}
+
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+
+@mixin button-size($size) {
+  font-size: $size;
+  padding: $size * 2 $size * 3;
+  margin: 1px;
+}
+
+
+@mixin gradient-box {
+  background: $gradient;
+  border: $border-standard;
+}
+
+
 * {
   margin: 0;
   padding: 0;
@@ -17,9 +47,10 @@ $gradient: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1)
   font-family: $font-primary;
 }
 
-// 3. Tipografía
+
 h3 { font-size: 18px; }
 .list-unstyled { font-size: 10px; }
+
 .article-content,
 .header-section {
   p {
@@ -27,6 +58,7 @@ h3 { font-size: 18px; }
     color: $gray-555;
   }
 }
+
 .title { font-size: 2.5em; color: $gray-333; }
 .subtitle {
   font-size: 1.2em;
@@ -34,8 +66,8 @@ h3 { font-size: 18px; }
   margin-bottom: 50px;
 }
 
-// 4. Enlaces
-a {
+
+%link-base {
   color: inherit;
   text-decoration: none !important;
   &:hover {
@@ -43,22 +75,19 @@ a {
     text-decoration: none !important;
   }
 }
+
+a { @extend %link-base; }
 .list-unstyled a,
-.content a {
-  color: inherit !important;
-  &:hover { color: inherit !important; }
-}
+.content a { @extend %link-base; }
 
-// 5. Botones
+
 .btn-custom {
-  font-size: 6px;
-  margin: 1px;
+  @include button-size(6px);
 }
 
-// 6. Estructura general
+
 body {
-  display: flex;
-  flex-direction: column;
+  @include flex(column);
   min-height: 100vh;
 }
 
@@ -69,33 +98,30 @@ footer {
   width: 100%;
 }
 
-// 7. Main con Bootstrap
 main { padding: 20px; }
 aside { padding: 5px; }
 .content {
   padding: 20px;
-  border: $border-standard;
+  @extend %bordered; 
 }
 
-// 8. Header
+
 header {
   padding: 20px;
-  text-align: center;
+  @extend %centered-text; 
   h1 {
-    border: $border-standard;
+    @include gradient-box; 
     padding: 25px;
     display: inline-block;
-    background: $gradient;
   }
 }
 
-// 9. Navbar
+
 .navbarOriginal {
   padding: 10px;
   ul {
+    @include flex(row, center, center);
     list-style: none;
-    display: flex;
-    justify-content: center;
     gap: 20px;
     margin: 0 0 15px 0;
     padding: 0;
@@ -104,29 +130,38 @@ header {
   a {
     text-decoration: none;
     color: $black;
-    font-size: 18px;
     padding: 10px 15px;
+    
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) {
+        font-size: 18px + ($i * 2);
+      }
+    }
   }
   ul :hover { color: $gray-666; }
 }
 
-// 10. Footer
+//Footer condicional. para poner algo la verdad no sirve para nada, lo mismo el bucle for
 footer {
   background-color: inherit;
   color: $black;
   font-size: 0.8rem;
   margin-top: 40px;
-  text-align: center;
+  @extend %centered-text;
   padding: 10px;
-  border: $border-standard;
+  @extend %bordered;
   h5 { font-size: 0.9rem; }
   i {
     color: $black;
     font-size: 40px;
+    
+    @if (lightness($black) > 50%) {
+      color: darken($black, 20%);
+    }
   }
 }
 
-// 11. Media Queries
+
 @media (max-width: 991px) {
   main { padding: 10px; }
   aside,
@@ -136,8 +171,7 @@ footer {
   }
   .navbarOriginal {
     ul {
-      flex-direction: column;
-      align-items: center;
+      @include flex(column, center, center);
     }
     li { margin: 10px 0; }
     a { font-size: 21.6px; }
@@ -153,7 +187,7 @@ footer {
   }
   h3 { font-size: 21.6px; }
   .list-unstyled { font-size: 12px; }
-  .btn-custom { font-size: 7.2px; }
+  .btn-custom { @include button-size(7.2px); }
   .title { font-size: 2.16em; }
   .subtitle {
     font-size: 1.2em;
@@ -161,8 +195,7 @@ footer {
   }
   .cover-image { height: 250px; }
   .article-item {
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, center, center);
   }
   .article-image { display: none; }
   .article-content {
@@ -173,32 +206,25 @@ footer {
   .carousel-inner { height: 100%; }
 }
 
-// 12. Otras clases y componentes
+
 .header-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+  @include flex(column, center, center);
   gap: 20px;
 }
 
 .caja {
   padding: 20px;
-  border: $border-standard;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @extend %bordered;
+  @include flex(row, center, center);
   font-family: $font-primary;
 }
 
 .titulos {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  @include flex(row, center, center);
   margin-bottom: 25px;
-  .caja { background: $gradient; }
+  .caja { @include gradient-box; }
 }
+
 
 .cover-image {
   width: 100%;
@@ -213,15 +239,13 @@ footer {
 }
 
 .articles-list {
-  display: flex;
-  flex-direction: column;
+  @include flex(column);
   gap: 30px;
 }
 
 .article-item {
-  display: flex;
+  @include flex(row, flex-start, flex-start);
   gap: 20px;
-  align-items: flex-start;
 }
 
 .article-image {
@@ -240,7 +264,7 @@ footer {
 }
 
 .carousel {
-  border: $border-standard;
+  @extend %bordered;
   height: 400px;
   padding: 10px;
   &-inner {
@@ -261,12 +285,12 @@ footer {
 
 #cr-widget-marquee {
   margin-top: 20px;
-  border: $border-standard;
+  @extend %bordered;
   padding: 10px;
 }
 
 ul {
-  border: $border-standard;
+  @extend %bordered;
   padding: 10px;
 }
 
@@ -296,11 +320,11 @@ gecko-coin-compare-chart-widget {
 
 .scroll-top-btn {
   display: block;
-  border: $border-standard;
+  @extend %bordered;
   padding: 20px;
   text-decoration: none;
   color: $black;
   margin: 20px auto 0 auto;
-  text-align: center;
+  @extend %centered-text;
   width: fit-content;
 }

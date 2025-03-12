@@ -1,3 +1,11 @@
+.scroll-top-btn, ul, #cr-widget-marquee, .carousel, .caja, footer, .content {
+  border: solid #000 4px;
+}
+
+.scroll-top-btn, footer, header {
+  text-align: center;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -30,7 +38,8 @@ h3 {
   margin-bottom: 50px;
 }
 
-a {
+.list-unstyled a,
+.content a, a {
   color: inherit;
   text-decoration: none !important;
 }
@@ -39,23 +48,17 @@ a:hover {
   text-decoration: none !important;
 }
 
-.list-unstyled a,
-.content a {
-  color: inherit !important;
-}
-.list-unstyled a:hover,
-.content a:hover {
-  color: inherit !important;
-}
-
 .btn-custom {
   font-size: 6px;
+  padding: 12px 18px;
   margin: 1px;
 }
 
 body {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
 }
 
@@ -76,27 +79,27 @@ aside {
 
 .content {
   padding: 20px;
-  border: solid #000 4px;
 }
 
 header {
   padding: 20px;
-  text-align: center;
 }
 header h1 {
+  background: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(253, 187, 45) 100%);
   border: solid #000 4px;
   padding: 25px;
   display: inline-block;
-  background: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(253, 187, 45) 100%);
 }
 
 .navbarOriginal {
   padding: 10px;
 }
 .navbarOriginal ul {
-  list-style: none;
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  list-style: none;
   gap: 20px;
   margin: 0 0 15px 0;
   padding: 0;
@@ -107,8 +110,16 @@ header h1 {
 .navbarOriginal a {
   text-decoration: none;
   color: #000;
-  font-size: 18px;
   padding: 10px 15px;
+}
+.navbarOriginal a:nth-child(1) {
+  font-size: 20px;
+}
+.navbarOriginal a:nth-child(2) {
+  font-size: 22px;
+}
+.navbarOriginal a:nth-child(3) {
+  font-size: 24px;
 }
 .navbarOriginal ul :hover {
   color: #666;
@@ -119,9 +130,7 @@ footer {
   color: #000;
   font-size: 0.8rem;
   margin-top: 40px;
-  text-align: center;
   padding: 10px;
-  border: solid #000 4px;
 }
 footer h5 {
   font-size: 0.9rem;
@@ -141,7 +150,9 @@ footer i {
     margin-bottom: 20px;
   }
   .navbarOriginal ul {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   .navbarOriginal li {
@@ -169,6 +180,8 @@ footer i {
   }
   .btn-custom {
     font-size: 7.2px;
+    padding: 14.4px 21.6px;
+    margin: 1px;
   }
   .title {
     font-size: 2.16em;
@@ -181,7 +194,9 @@ footer i {
     height: 250px;
   }
   .article-item {
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
   }
   .article-image {
@@ -203,29 +218,30 @@ footer i {
 .header-section {
   display: flex;
   flex-direction: column;
+  justify-content: center;
   align-items: center;
-  text-align: center;
   gap: 20px;
 }
 
 .caja {
   padding: 20px;
-  border: solid #000 4px;
-  text-align: center;
   display: flex;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   font-family: "Press Start 2P", serif;
 }
 
 .titulos {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   margin-bottom: 25px;
 }
 .titulos .caja {
   background: linear-gradient(0deg, rgb(34, 193, 195) 0%, rgb(253, 187, 45) 100%);
+  border: solid #000 4px;
 }
 
 .cover-image {
@@ -243,13 +259,17 @@ footer i {
 .articles-list {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 30px;
 }
 
 .article-item {
   display: flex;
-  gap: 20px;
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: flex-start;
+  gap: 20px;
 }
 
 .article-image {
@@ -268,7 +288,6 @@ footer i {
 }
 
 .carousel {
-  border: solid #000 4px;
   height: 400px;
   padding: 10px;
 }
@@ -289,12 +308,10 @@ footer i {
 
 #cr-widget-marquee {
   margin-top: 20px;
-  border: solid #000 4px;
   padding: 10px;
 }
 
 ul {
-  border: solid #000 4px;
   padding: 10px;
 }
 
@@ -339,12 +356,10 @@ gecko-coin-compare-chart-widget {
 
 .scroll-top-btn {
   display: block;
-  border: solid #000 4px;
   padding: 20px;
   text-decoration: none;
   color: #000;
   margin: 20px auto 0 auto;
-  text-align: center;
   width: fit-content;
 }
 
