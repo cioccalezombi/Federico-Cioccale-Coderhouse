@@ -1,0 +1,17 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: $font-primary;
+  }
+  
+  body {
+    @include flex(column);
+    min-height: 100vh;
+  }
+  
+  h3 { font-size: 18px; }
+  .list-unstyled { font-size: 10px; }
+  
+  a { @extend %link-base; }
+  

@@ -1,0 +1,44 @@
+@media (max-width: 991px) {
+    main { padding: 10px; }
+    aside,
+    .content {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+    .navbarOriginal {
+      ul {
+        @include flex(column, center, center);
+      }
+      li { margin: 10px 0; }
+      a { font-size: 21.6px; }
+    }
+    #cr-widget-marquee { font-size: 0.9rem; }
+    header h1 {
+      font-size: 1.8rem;
+      padding: 15px;
+    }
+    .caja {
+      width: 100%;
+      padding: 15px;
+    }
+    h3 { font-size: 21.6px; }
+    .list-unstyled { font-size: 12px; }
+    .btn-custom { @include button-size(7.2px); }
+    .title { font-size: 2.16em; }
+    .subtitle {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+    .cover-image { height: 250px; }
+    .article-item {
+      @include flex(column, center, center);
+    }
+    .article-image { display: none; }
+    .article-content {
+      h3 { font-size: 21.6px; }
+      p { font-size: 1.2em; }
+    }
+    .carousel { height: 300px; }
+    .carousel-inner { height: 100%; }
+  }
+  

@@ -1,0 +1,19 @@
+footer {
+    background-color: inherit;
+    color: $black;
+    font-size: 0.8rem;
+    margin-top: 40px;
+    @extend %centered-text;
+    padding: 10px;
+    @extend %bordered;
+    width: 100%;
+    h5 { font-size: 0.9rem; }
+    i {
+      color: $black;
+      font-size: 40px;
+      @if (lightness($black) > 50%) {
+        color: darken($black, 20%);
+      }
+    }
+  }
+  

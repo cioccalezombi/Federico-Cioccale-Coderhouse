@@ -1,0 +1,44 @@
+$black: #000;
+$gray-333: #333;
+$gray-555: #555;
+$gray-666: #666;
+$gray-ccc: #ccc;
+$font-primary: "Press Start 2P", serif;
+$font-secondary: "Roboto", sans-serif;
+$border-standard: solid $black 4px;
+$gradient: linear-gradient(0deg, rgba(34, 193, 195, 1) 0%, rgba(253, 187, 45, 1) 100%);
+
+%bordered {
+  border: $border-standard;
+}
+
+%centered-text {
+  text-align: center;
+}
+
+%link-base {
+  color: inherit;
+  text-decoration: none !important;
+  &:hover {
+    color: inherit !important;
+    text-decoration: none !important;
+  }
+}
+
+@mixin flex($direction: row, $justify: center, $align: center) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin button-size($size) {
+  font-size: $size;
+  padding: $size * 2 $size * 3;
+  margin: 1px;
+}
+
+@mixin gradient-box {
+  background: $gradient;
+  border: $border-standard;
+}

@@ -1,0 +1,50 @@
+aside {
+    padding: 5px;
+    width: 100%;
+  }
+  
+  .titulos {
+    @include flex(row, center, center);
+    margin-bottom: 25px;
+    .caja { @include gradient-box; }
+  }
+  
+  .caja {
+    padding: 20px;
+    @extend %bordered;
+    @include flex(row, center, center);
+    font-family: $font-primary;
+  }
+  
+  .list-unstyled {
+    @extend %bordered;
+    
+    a { @extend %link-base; }
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .btn-custom {
+    @include button-size(6px);
+  }
+  
+  .carousel {
+    @extend %bordered;
+    height: 400px;
+    padding: 10px;
+    &-inner {
+      height: 400px;
+      overflow: hidden;
+    }
+    &-item { height: 100%; }
+    &-control-prev-icon,
+    &-control-next-icon {
+      filter: invert(100%);
+    }
+    &-control-prev,
+    &-control-next {
+      top: 85%;
+      transform: translateY(0);
+    }
+  }
+  

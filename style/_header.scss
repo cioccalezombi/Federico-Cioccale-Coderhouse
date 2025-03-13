@@ -1,0 +1,15 @@
+header {
+    padding: 20px;
+    @extend %centered-text;
+    h1 {
+      @include gradient-box;
+      padding: 25px;
+      display: inline-block;
+    }
+  }
+
+  .article-content p,
+.header-section p {
+  font-family: "Roboto", sans-serif;
+  color: #555;
+}
