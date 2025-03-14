@@ -26,6 +26,9 @@ aside {
   
   .btn-custom {
     @include button-size(6px);
+    padding: 4px;
+    margin-top: 10px;
+    margin-bottom: -10px;
   }
   
   .carousel {
