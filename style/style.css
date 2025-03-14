@@ -1,3 +1,4 @@
+@charset "UTF-8";
 footer, .carousel, .list-unstyled, .caja, .content, #cr-widget-marquee, .navbarOriginal ul {
   border: solid #000 4px;
 }
@@ -56,6 +57,7 @@ header h1 {
 
 .navbarOriginal {
   padding: 10px;
+  /* Animación al pasar el mouse */
 }
 .navbarOriginal ul {
   display: flex;
@@ -69,6 +71,13 @@ header h1 {
 }
 .navbarOriginal li {
   display: inline;
+  transition: transform 0.3s ease; /* Transición suave */
+}
+.navbarOriginal li:hover ~ li {
+  transform: translateX(50px);
+}
+.navbarOriginal li:has(+ li:hover) {
+  transform: translateX(-50px);
 }
 .navbarOriginal a {
   text-decoration: none;
